@@ -34,6 +34,9 @@ services:
 
   api:
     image: php:8.3-apache
+    build:
+      context: ./api
+      dockerfile: Dockerfile
     container_name: api
     depends_on:
       - db
